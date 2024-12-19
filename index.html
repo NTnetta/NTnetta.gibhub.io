@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game | CodingNepal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts/word-list.js" defer></script> <!-- Ensure word-list.js defines the wordList -->
+  <script src="scripts/script.js" defer></script> <!-- Only this script tag should remain -->
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <p>Hi, I'm Netta!</p>
+  <!-- Game Over Modal -->
+  <div class="game-modal" aria-hidden="true">
+    <div class="content">
+      <img src="" alt="Game Over Animation"> <!-- The image source will be dynamically set -->
+      <h4>Game Over!</h4>
+      <p>The correct word was: <b>rainbow</b></p>
+      <button class="play-again" aria-label="Play Again">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Main Game Container -->
+  <main class="container">
+    <section class="hangman-box">
+      <img src="hangman-0.png" alt="Hangman Illustration" aria-hidden="true">
+      <h1>Hangman Game</h1>
+    </section>
+    <section class="game-box">
+      <!-- Word Display -->
+      <ul class="word-display" aria-live="polite"></ul>
+      <h4 class="hint-text">
+        Hint: <b>Lorem ipsum dolor sit amet consectetur adipiscing elit.</b>
+      </h4>
+      <h4 class="guesses-text">
+        Incorrect guesses: <b>0 / 6</b>
+      </h4>
+      <!-- Keyboard -->
+      <div class="keyboard"></div>
+    </section>
+  </main>
 </body>
 </html>
